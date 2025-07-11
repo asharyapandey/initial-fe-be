@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/" /* Specify an output folder for all emitted files. */,
+    "lib": ["ES2022"],
+    "target": "ES2022",
+    "moduleResolution": "NodeNext",
+    "module": "NodeNext",
+    "sourceMap": true /* Create source map files for emitted JavaScript files. */,
+    "forceConsistentCasingInFileNames": true,
+    "importsNotUsedAsValues": "remove" /* Specify emit/checking behavior for imports that are only used for types. */,
+    "isolatedModules": true /* Ensure that each file can be safely transpiled without relying on other imports. */,
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  },
+  "include": ["./src/**/*.ts"],
+  "ts-node": {
+    "esm": true,
+    "transpileOnly": true,
+    "files": true,
+    "experimentalResolver": true
+  }
+}

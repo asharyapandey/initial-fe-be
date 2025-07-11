@@ -1,0 +1,55 @@
+{
+  "name": "backend",
+  "version": "0.0.0",
+  "description": "backend",
+  "main": "index.js",
+  "private": true,
+  "type": "module",
+  "files": [
+    "./dist/"
+  ],
+  "engines": {
+    "node": "^20.9.0",
+    "npm": "^10.1.0"
+  },
+  "scripts": {
+    "dev": "node --no-warnings --env-file .env --enable-source-maps --loader ts-node/esm src/index.ts",
+    "dev:watch": "nodemon --watch --env-file .env src/ -e ts --exec \"npm run dev\"",
+    "build": "tsc",
+    "start": "node --env-file .env dist/index.js",
+    "prestart": "tsc",
+    "lint": "eslint 'src/**/*.ts' && prettier --check './src/**/*.ts'",
+    "prepare": "husky"
+  },
+  "author": "asharyapandey",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.5.0",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^20.14.8",
+    "eslint": "^9.5.0",
+    "eslint-plugin-simple-import-sort": "^12.1.0",
+    "eslint-plugin-unused-imports": "^4.0.0",
+    "globals": "^15.6.0",
+    "husky": "^9.0.11",
+    "nodemon": "^3.1.4",
+    "prettier": "^3.3.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.2",
+    "typescript-eslint": "^7.13.1"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.19.2",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.10.1",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.20",
+    "winston": "^3.13.0",
+    "zod": "^3.23.8"
+  },
+  "overrides": {
+    "eslint": "^9.5.0"
+  }
+}
